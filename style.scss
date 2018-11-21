@@ -1,0 +1,50 @@
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+
+.container {
+    @include flexbox;
+    @include justify-content(center);
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+     align-items: center;
+}
+
+.upper {
+    @include flexbox;
+    @include justify-content(center);
+    align-items: center;
+    flex-direction: column;
+    height: 10rem;
+    width: 100%;
+
+    .h1 {
+        width: 100vw;
+        text-align: center;
+    }
+}
+.forty{
+	@include flexbox;
+	@include  justify-content(center);
+	flex-direction: column;
+	 align-items: center;
+}
