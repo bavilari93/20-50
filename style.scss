@@ -26,9 +26,16 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-     align-items: center;
+    align-items: center;
 }
 
+ a {
+        text-decoration: none;
+        color: black;
+        font-weight: 900;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
 .upper {
     @include flexbox;
     @include justify-content(center);
@@ -36,15 +43,54 @@
     flex-direction: column;
     height: 10rem;
     width: 100%;
+    line-height: 1.4rem;
 
-    .h1 {
-        width: 100vw;
-        text-align: center;
+
+    span {
+        font-size: 1.3rem;
+        font-weight: 300;
     }
 }
-.forty{
-	@include flexbox;
-	@include  justify-content(center);
-	flex-direction: column;
-	 align-items: center;
+
+.forty {
+    display: relative;
+    align-items: center;
+    line-height: 4rem;
+
+    h1:nth-child(2n) {
+        font-size: 8rem;
+        text-align: center;
+    }
+
+    h1:nth-child(3n) {
+        margin-top: 1rem;
+        width: 2rem;
+        line-height: 2rem;
+    }
+}
+
+.middle {
+    margin-top: -3rem;
+    width: 100%;
+    height: 7rem;
+    transform: skewY(-35deg);
+    text-align: center;
+    border: {
+        top: solid black .6rem;
+        bottom: solid black .6rem;
+    }
+   p{
+   	font-size:1.5rem;
+   	margin-top: 2rem;
+   	font-height: 2rem;
+   }
+}
+.down{
+	display: relative;
+    align-items: center;
+	margin-top: 2.5rem;
+	text-align: center;
+	h1{
+		font-size:8rem;
+	}
 }
